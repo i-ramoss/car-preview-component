@@ -1,0 +1,121 @@
+:root {
+  /* primary */
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+
+  /* neutral */
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100vh;
+  background-color: var(--very-light-gray);
+
+  overflow-x: hidden;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(250px, 1fr));
+  justify-content: center;
+  align-content: center;
+
+  width: 100%;
+  max-width: 900px;
+
+  margin: 2px;
+}
+
+.car {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3em;
+
+  padding: 4em;
+}
+
+.sedans {
+  color: var(--bright-orange);
+  background-color: var(--bright-orange);
+  border-radius: 8px 0 0 8px;
+}
+
+.suvs {
+  color: var(--dark-cyan);
+  background-color: var(--dark-cyan);
+}
+
+.luxury {
+  color: var(--very-dark-cyan);
+  background-color: var(--very-dark-cyan);
+  border-radius: 0 8px 8px 0;
+}
+
+.title {
+  font-family: "Big Shoulders Display", sans-serif;
+  font-size: 3.4rem;
+  text-transform: uppercase;
+  color: var(--very-light-gray);
+}
+
+.description {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.8;
+  color: var(--transparent-white);
+
+  max-width: 23ch;
+  margin-bottom: 15%;
+}
+
+.sedans .learn-more-button {
+  color: var(--bright-orange);
+}
+
+.suvs .learn-more-button {
+  color: var(--dark-cyan);
+}
+
+.luxury .learn-more-button {
+  color: var(--very-dark-cyan);
+}
+
+.learn-more-button {
+  width: 100%;
+  max-width: 120px;
+
+  background-color: var(--very-light-gray);
+  border: 2px solid var(--very-light-gray);
+  border-radius: 2.4rem;
+  padding: 0.8em 0;
+
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 1.4rem;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.learn-more-button:hover {
+  border: 2px solid var(--transparent-white);
+  background-color: transparent;
+  color: var(--transparent-white);
+}
